@@ -40,7 +40,7 @@ export default function Hero() {
           src={isSm ? profileHeroMobile : profileHero}
           alt=""
           w={isSm ? "100%" : "50%"}
-          h={isSm ? "45vh" : "auto"}
+          h={isSm ? "45vh" : "75vh"}
         />
       </Flex>
     </Container>
