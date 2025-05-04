@@ -24,3 +24,10 @@ Run the preview app:
 ```bash
 npm run preview
 ```
+
+
+## Deployment
+
+Push to `main` branch to trigger a deployment.
+
+This is handled by the GitHub Actions workflow configured in `.github/workflows/deploy.yml`.
