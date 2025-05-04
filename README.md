@@ -1,5 +1,26 @@
-# Mantine Vite template
+# Portfolio
 
-Get started with the template by clicking `Use this template` button on the top of the page.
+This repo drives the `paolomura.github.io` portfolio site.
 
-[Documentation](https://mantine.dev/guides/vite/)
+[Mantine Documentation](https://mantine.dev/guides/vite/)
+
+
+## Commands
+
+Run the development app:
+
+```bash
+npm run dev
+```
+
+Create a build:
+
+```bash
+npm run build
+```
+
+Run the preview app:
+
+```bash
+npm run preview
+```
