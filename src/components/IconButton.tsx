@@ -15,7 +15,7 @@ export default function IconButton({ Icon, href, ariaLabel }: IconProps) {
       size={50}
       aria-label={ariaLabel}
       href={href}
-      onClick={(event) => event.preventDefault()}
+      target="_blank"
     >
       <Icon size={38} stroke={1.5} />
     </ActionIcon>
