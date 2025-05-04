@@ -1,6 +1,6 @@
 # Portfolio
 
-This repo drives the `paolomura.github.io` portfolio site.
+This repo drives the [Paolo Mura](https://paolomura.github.io/) portfolio site, hosted on GitHub Pages.
 
 [Mantine Documentation](https://mantine.dev/guides/vite/)
 
