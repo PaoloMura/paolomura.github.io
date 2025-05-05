@@ -8,7 +8,7 @@ import Header from "./sections/Header";
 
 export default function App() {
   return (
-    <MantineProvider theme={theme} defaultColorScheme="dark">
+    <MantineProvider theme={theme} defaultColorScheme="auto">
       <div className={classes.content}>
         <Header />
         <Hero />
