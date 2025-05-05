@@ -20,7 +20,7 @@ export default function Header() {
   const backgroundColor =
     computedColorScheme === "dark"
       ? theme.colors.dark[9]
-      : theme.colors.gray[3];
+      : theme.colors.gray[1];
 
   return (
     <header className={classes.container} style={{ backgroundColor }}>
