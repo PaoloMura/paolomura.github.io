@@ -5,6 +5,13 @@ This repo drives the [Paolo Mura](https://paolomura.github.io/) portfolio site, 
 [Mantine Documentation](https://mantine.dev/guides/vite/)
 
 
+## Setup
+
+1. Clone the repo
+2. `npm i` to install dependencies
+3. `npm run dev` to start a local development server
+
+
 ## Commands
 
 Run the development app:

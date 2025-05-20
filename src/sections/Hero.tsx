@@ -28,7 +28,7 @@ export default function Hero() {
           </Title>
           <Text size="1.5rem" c="gray">
             I help build the product discovery pages on the{" "}
-            <Anchor href="https://www.sky.com" target="_blank">
+            <Anchor href="https://www.sky.com" target="_blank" fw={700}>
               sky.com
             </Anchor>{" "}
             website.
