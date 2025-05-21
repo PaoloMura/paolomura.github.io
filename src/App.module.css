@@ -3,6 +3,7 @@
   border-radius: 0 0 65px 65px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 160px;
+  padding-bottom: 65px;
   position: relative;
   z-index: 1;
 }

@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Dance Events",
+    "description": "A website that allows users to find dance classes and socials in their local area.",
+    "image": "/projects/dance-events.webp",
+    "keywords": ["website", "dance"],
+    "technologies": ["react", "mui"],
+    "year": "2025",
+    "ctas": [
+      {
+        "text": "Website",
+        "url": "https://paolomura.github.io/dance-events"
+      }
+    ]
+  },
+  {
+    "name": "Nexus",
+    "description": "A event organising social networking website that connects users through mutual friends.",
+    "image": "/projects/nexus.webp",
+    "keywords": ["website", "social networking"],
+    "technologies": ["nextjs", "mui", "postgresql"],
+    "year": "2024",
+    "ctas": [
+      {
+        "text": "Website",
+        "url": "https://www.nexus-events.co.uk"
+      }
+    ]
+  },
+  {
+    "name": "Dissertation",
+    "description": "A website that allows teachers to write scripts that generate practice questions for graph theory, presented in an interactive UI.",
+    "image": "/projects/graphquest.webp",
+    "keywords": ["website", "graph theory"],
+    "technologies": [
+      "react",
+      "mui",
+      "cytoscapejs",
+      "python",
+      "flask",
+      "aws-lightsail"
+    ],
+    "year": "2023",
+    "ctas": [
+      {
+        "text": "Documentation",
+        "url": "https://graphquest.readthedocs.io/en/latest/"
+      }
+    ]
+  },
+  {
+    "name": "CGI robot",
+    "description": "A 3D model of a robot made using Autodesk Maya. The model is rigged and animated for a short 15 second sequence.",
+    "image": "/projects/cgi-robot.webp",
+    "keywords": ["3D", "animation"],
+    "technologies": ["maya"],
+    "year": "2023",
+    "ctas": [
+      {
+        "text": "Video",
+        "url": "https://youtu.be/t_9I44htdrs?si=Mzzv3q3DEVlcJBfI"
+      }
+    ]
+  },
+  {
+    "name": "Time travel game",
+    "description": "A 3D multiplayer web game. Two teams of players compete in a cat-and-mouse game. Everyone can time travel freely. The password is 'time-mine'.",
+    "image": "/projects/time-mine.webp",
+    "keywords": ["game", "3D"],
+    "technologies": ["unity", "c-sharp"],
+    "year": "2022",
+    "ctas": [
+      {
+        "text": "Play online",
+        "url": "https://eldonelectronic.itch.io/time-mine-final"
+      },
+      {
+        "text": "Trailer",
+        "url": "https://youtu.be/QFxDrEqKDkw?si=mAHVeDZxta8YwNK5"
+      }
+    ]
+  },
+  {
+    "name": "Brickfilming",
+    "description": "A trilogy of short films made using stop motion animation with LEGO.",
+    "image": "/projects/brickfilm.webp",
+    "keywords": ["animation", "VFX"],
+    "year": "2020",
+    "ctas": [
+      {
+        "text": "Playlist",
+        "url": "https://youtube.com/playlist?list=PLQfVX8wOZ6mgqBUq9pt2qVTPGOc-LidPR&si=i29TCYrmPgf-8JLT"
+      }
+    ]
+  }
+]
