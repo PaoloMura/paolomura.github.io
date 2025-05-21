@@ -53,11 +53,7 @@ export default function Projects() {
                         <Tooltip label={name} key={technology}>
                           <Box
                             className={classes.logoContainer}
-                            __vars={{
-                              "--logo-color": isDarkLogo(technology)
-                                ? "var(--mantine-color-gray-3)"
-                                : "transparent",
-                            }}
+                            variant={isDarkLogo(technology) ? "dark" : "light"}
                           >
                             <Image
                               src={`/icons/${technology}-logo.svg`}

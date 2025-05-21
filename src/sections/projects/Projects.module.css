@@ -36,7 +36,9 @@
 }
 
 .logoContainer {
-  background-color: var(--logo-color);
   border-radius: var(--mantine-radius-lg);
-  padding: 5px;
+  
+  &[data-variant="dark"] {
+    filter: drop-shadow(0 0 .05rem var(--mantine-color-white));
+  }
 }
