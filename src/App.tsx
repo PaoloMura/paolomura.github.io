@@ -1,21 +1,21 @@
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
+import { Box, MantineProvider } from "@mantine/core";
 import { theme } from "./theme";
-import Hero from "./sections/Hero";
-import Footer from "./sections/Footer";
+import Hero from "./sections/hero/Hero";
+import Footer from "./sections/footer/Footer";
 import classes from "./App.module.css";
-import Header from "./sections/Header";
+import Header from "./sections/header/Header";
 
 export default function App() {
   return (
     <MantineProvider theme={theme} defaultColorScheme="auto">
-      <div className={classes.content}>
+      <Box className={classes.content}>
         <Header />
         <Hero />
-      </div>
-      <div className={classes.footer}>
+      </Box>
+      <Box className={classes.footer}>
         <Footer />
-      </div>
+      </Box>
     </MantineProvider>
   );
 }

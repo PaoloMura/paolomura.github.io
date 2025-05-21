@@ -3,12 +3,10 @@ import {
   Switch,
   useComputedColorScheme,
   useMantineColorScheme,
-  useMantineTheme,
 } from "@mantine/core";
 import classes from "./Header.module.css";
 
 export default function Header() {
-  const theme = useMantineTheme();
   const { colorScheme, setColorScheme } = useMantineColorScheme();
 
   const computedColorScheme = useComputedColorScheme("light");
@@ -17,17 +15,12 @@ export default function Header() {
     setColorScheme(computedColorScheme === "dark" ? "light" : "dark");
   };
 
-  const backgroundColor =
-    computedColorScheme === "dark"
-      ? theme.colors.dark[9]
-      : theme.colors.gray[1];
-
   return (
-    <header className={classes.container} style={{ backgroundColor }}>
+    <header className={classes.container}>
       <Container size="lg" py="md">
         <Switch
           label="Toggle dark mode"
-          size="lg"
+          size="md"
           checked={colorScheme === "dark"}
           onChange={toggleColorScheme}
         />

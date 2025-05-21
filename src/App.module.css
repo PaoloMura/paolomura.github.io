@@ -2,12 +2,16 @@
   background-color: var(--mantine-color-body);
   border-radius: 0 0 65px 65px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 180px;
+  margin-bottom: 160px;
   position: relative;
   z-index: 1;
 }
 
 .footer {
+  background-color: light-dark(
+    var(--mantine-color-gray-3),
+    var(--mantine-color-dark-4)
+  );
   bottom: 0;
   left: 0;
   position: fixed;

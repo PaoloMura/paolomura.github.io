@@ -1,0 +1,14 @@
+.container {
+  height: 100vh;
+  max-width: var(--mantine-breakpoint-lg);
+  padding-bottom: var(--mantine-spacing-xl);
+  padding-top: 80px;
+
+  @mixin smaller-than $mantine-breakpoint-lg {
+    max-width: var(--mantine-breakpoint-md);
+  }
+
+  @mixin smaller-than $mantine-breakpoint-md {
+    max-width: var(--mantine-breakpoint-sm);
+  }
+}

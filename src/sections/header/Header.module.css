@@ -1,0 +1,9 @@
+.container {
+  background-color: light-dark(
+    var(--mantine-color-gray-1),
+    var(--mantine-color-dark-9)
+  );
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

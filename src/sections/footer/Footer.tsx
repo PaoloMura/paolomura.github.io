@@ -1,11 +1,4 @@
-import {
-  Container,
-  Group,
-  Text,
-  Title,
-  useMantineColorScheme,
-  useMantineTheme,
-} from "@mantine/core";
+import { Container, Group, Text, Title } from "@mantine/core";
 import classes from "./Footer.module.css";
 import {
   IconBrandGithub,
@@ -13,26 +6,18 @@ import {
   IconBrandTiktok,
   IconBrandYoutube,
 } from "@tabler/icons-react";
-import IconButton from "../components/IconButton";
+import IconButton from "@/components/IconButton";
 
 export default function Footer() {
-  const theme = useMantineTheme();
-  const { colorScheme } = useMantineColorScheme();
-
-  const backgroundColor =
-    colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[3];
-
   return (
-    <footer className={classes.footer} style={{ backgroundColor }}>
+    <footer className={classes.footer}>
       <Container>
         <Title order={2}>Contact</Title>
         <Text>You can follow me on:</Text>
 
         <Group
           gap="xl"
-          py="md"
           wrap="nowrap"
-          w="100%"
           className={classes.group}
         >
           <IconButton

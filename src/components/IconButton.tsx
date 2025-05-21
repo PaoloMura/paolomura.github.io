@@ -11,7 +11,6 @@ export default function IconButton({ Icon, href, ariaLabel }: IconProps) {
     <ActionIcon
       component="a"
       color="gray"
-      radius="xl"
       size={50}
       aria-label={ariaLabel}
       href={href}

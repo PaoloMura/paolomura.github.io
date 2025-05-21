@@ -1,0 +1,9 @@
+.footer {
+  padding-top: 500px;
+}
+
+.group {
+  overflow: auto;
+  padding-block: var(--mantine-spacing-md);
+  width: 100%;
+}
