@@ -41,7 +41,9 @@ export default function Projects() {
                     </Card.Section>
 
                     <Stack pt="md" gap="xs">
-                      <Title order={3}>{project.name}</Title>
+                      <Title order={3} ta="left">
+                        {project.name}
+                      </Title>
 
                       <Group gap="xs">
                         {project.keywords.map((keyword) => (
