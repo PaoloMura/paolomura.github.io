@@ -11,23 +11,21 @@ import {
   Stack,
   Text,
   Title,
-  Tooltip,
 } from "@mantine/core";
 import classes from "./Projects.module.css";
 import projects from "@/data/projects.json";
-import { getTechnologyName } from "@/utils/getTechnologyName";
 import { IconExternalLink } from "@tabler/icons-react";
-import { isDarkLogo } from "@/utils/isDarkLogo";
 import GridCard from "@/components/grid-card/GridCard";
+import TechIcon from "@/components/tech-icon/TechIcon";
 
 export default function Projects() {
   return (
     <Box className={classes.background}>
       <Container size="lg">
-        <Title order={2} pb="md">
+        <Title order={2} pb="xl" pt="xl" ta={{ base: "center", sm: "left" }}>
           Projects
         </Title>
-        <Grid>
+        <Grid gutter={{ base: "lg", sm: "md" }}>
           {projects.map((project) => (
             <Grid.Col
               key={`project-${project.name}`}
@@ -47,32 +45,17 @@ export default function Projects() {
 
                       <Group gap="xs">
                         {project.keywords.map((keyword) => (
-                          <Badge variant="light">{keyword}</Badge>
+                          <Badge variant="default">{keyword}</Badge>
                         ))}
                       </Group>
 
                       <Group gap="xs">
-                        {project.technologies?.map((technology) => {
-                          const name = getTechnologyName(technology);
-                          return (
-                            <Tooltip label={name} key={technology}>
-                              <Box
-                                className={classes.logoContainer}
-                                variant={
-                                  isDarkLogo(technology) ? "dark" : "light"
-                                }
-                              >
-                                <Image
-                                  src={`/icons/${technology}-logo.svg`}
-                                  alt={name}
-                                  fit="contain"
-                                  h={24}
-                                  w={24}
-                                />
-                              </Box>
-                            </Tooltip>
-                          );
-                        })}
+                        {project.technologies?.map((technology) => (
+                          <TechIcon
+                            key={`icon-${technology}`}
+                            technology={technology}
+                          />
+                        ))}
                       </Group>
                     </Stack>
                   </>
