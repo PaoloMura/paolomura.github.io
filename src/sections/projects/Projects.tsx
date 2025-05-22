@@ -4,6 +4,7 @@ import {
   Button,
   Card,
   Container,
+  Flex,
   Grid,
   Group,
   Image,
@@ -17,6 +18,7 @@ import projects from "@/data/projects.json";
 import { getTechnologyName } from "@/utils/getTechnologyName";
 import { IconExternalLink } from "@tabler/icons-react";
 import { isDarkLogo } from "@/utils/isDarkLogo";
+import GridCard from "@/components/grid-card/GridCard";
 
 export default function Projects() {
   return (
@@ -32,61 +34,74 @@ export default function Projects() {
               span={{ base: 12, sm: 6, md: 4 }}
               pos="relative"
             >
-              <Card className={classes.frontCard}>
-                <Card.Section>
-                  <Image src={project.image} alt="" height={160} />
-                </Card.Section>
+              <GridCard
+                title={project.name}
+                frontContent={
+                  <>
+                    <Card.Section>
+                      <Image src={project.image} alt="" height={160} />
+                    </Card.Section>
 
-                <Stack pt="md" gap="xs">
-                  <Title order={3}>{project.name}</Title>
+                    <Stack pt="md" gap="xs">
+                      <Title order={3}>{project.name}</Title>
 
-                  <Group gap="xs">
-                    {project.keywords.map((keyword) => (
-                      <Badge variant="light">{keyword}</Badge>
-                    ))}
-                  </Group>
+                      <Group gap="xs">
+                        {project.keywords.map((keyword) => (
+                          <Badge variant="light">{keyword}</Badge>
+                        ))}
+                      </Group>
 
-                  <Group gap="xs">
-                    {project.technologies?.map((technology) => {
-                      const name = getTechnologyName(technology);
-                      return (
-                        <Tooltip label={name} key={technology}>
-                          <Box
-                            className={classes.logoContainer}
-                            variant={isDarkLogo(technology) ? "dark" : "light"}
-                          >
-                            <Image
-                              src={`/icons/${technology}-logo.svg`}
-                              alt={name}
-                              fit="contain"
-                              h={24}
-                              w={24}
-                            />
-                          </Box>
-                        </Tooltip>
-                      );
-                    })}
-                  </Group>
-                </Stack>
-              </Card>
-
-              <Card className={classes.backCard}>
-                <Text>{project.description}</Text>
-                <Stack gap="xs">
-                  {project.ctas.map((cta, index) => (
-                    <Button
-                      key={`project-cta-${index}`}
-                      component="a"
-                      target="_blank"
-                      href={cta.url}
-                      rightSection={<IconExternalLink size={14} />}
-                      variant="outline"
-                    >
-                      {cta.text}
-                    </Button>
-                  ))}
-                </Stack>
-              </Card>
+                      <Group gap="xs">
+                        {project.technologies?.map((technology) => {
+                          const name = getTechnologyName(technology);
+                          return (
+                            <Tooltip label={name} key={technology}>
+                              <Box
+                                className={classes.logoContainer}
+                                variant={
+                                  isDarkLogo(technology) ? "dark" : "light"
+                                }
+                              >
+                                <Image
+                                  src={`/icons/${technology}-logo.svg`}
+                                  alt={name}
+                                  fit="contain"
+                                  h={24}
+                                  w={24}
+                                />
+                              </Box>
+                            </Tooltip>
+                          );
+                        })}
+                      </Group>
+                    </Stack>
+                  </>
+                }
+                backContent={
+                  <Flex
+                    direction="column"
+                    justify="space-evenly"
+                    gap="lg"
+                    h="100%"
+                  >
+                    <Text>{project.description}</Text>
+                    <Stack gap="xs">
+                      {project.ctas.map((cta, index) => (
+                        <Button
+                          key={`project-cta-${index}`}
+                          component="a"
+                          target="_blank"
+                          href={cta.url}
+                          rightSection={<IconExternalLink size={14} />}
+                          variant="outline"
+                        >
+                          {cta.text}
+                        </Button>
+                      ))}
+                    </Stack>
+                  </Flex>
+                }
+              />
             </Grid.Col>
           ))}
         </Grid>

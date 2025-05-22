@@ -6,7 +6,7 @@ import {
   IconBrandTiktok,
   IconBrandYoutube,
 } from "@tabler/icons-react";
-import IconButton from "@/components/IconButton";
+import IconButton from "@/components/icon-button/IconButton";
 
 export default function Footer() {
   return (

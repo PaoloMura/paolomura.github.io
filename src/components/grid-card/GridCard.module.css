@@ -1,0 +1,39 @@
+.frontMobileCard {
+  height: 100%;
+  width: 100%;
+
+  border: none;
+
+  @mixin hover {
+    cursor: pointer;
+    filter: brightness(light-dark(0.85, 0.75));
+  }
+}
+
+.frontDesktopCard {
+  height: 100%;
+  width: 100%;
+
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+
+  @mixin hover {
+    opacity: 0;
+  }
+}
+
+.backDesktopCard {
+  height: 100%;
+  width: 100%;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+
+  @mixin hover {
+    opacity: 1;
+  }
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
