@@ -1,0 +1,16 @@
+.skillContainer {
+  background-color: light-dark(
+    var(--mantine-color-gray-2),
+    var(--mantine-color-dark-5)
+  );
+
+  height: 100%;
+  padding: var(--mantine-spacing-sm);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--mantine-spacing-xs);
+
+}

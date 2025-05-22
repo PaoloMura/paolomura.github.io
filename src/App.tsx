@@ -6,6 +6,7 @@ import Footer from "./sections/footer/Footer";
 import classes from "./App.module.css";
 import Header from "./sections/header/Header";
 import Projects from "./sections/projects/Projects";
+import Skills from "./sections/skills/Skills";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Header />
         <Hero />
         <Projects />
+        <Skills />
       </Box>
       <Box className={classes.footer}>
         <Footer />

@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Languages",
+    "skills": [
+      "html",
+      "css",
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "c",
+      "cpp",
+      "c-sharp",
+      "go",
+      "haskell",
+      "prolog"
+    ]
+  },
+  {
+    "category": "Tools and Frameworks",
+    "skills": [
+      "react",
+      "nextjs",
+      "styled-components",
+      "mui",
+      "mantine",
+      "cytoscapejs",
+      "flask",
+      "postgresql",
+      "sqlite",
+      "docker",
+      "kubernetes",
+      "aws",
+      "git",
+      "github",
+      "jest",
+      "react-testing-library",
+      "unity",
+      "maya"
+    ]
+  }
+]
