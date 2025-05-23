@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+  height: fit-content;
+  position: relative;
+
+  &::before {
+    border-left: 0.2rem solid
+      light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-3));
+    content: "";
+    position: absolute;
+    left: 51px;
+    height: 100%;
+  }
+}
+
+.years {
+  width: 150px;
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+  font-weight: 700;
+  font-family: var(--mantine-font-family-monospace);
+}
+
+.title {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--mantine-spacing-sm);
+}
+
+.description {
+  margin-left: 150px;
+  padding-top: var(--mantine-spacing-xs);
+  padding-bottom: 70px;
+}

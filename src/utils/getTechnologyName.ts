@@ -54,6 +54,8 @@ export function getTechnologyName(technology: string): string {
       return "React";
     case "react-testing-library":
       return "Testing Library";
+    case "sky":
+      return "Sky";
     case "sqlite":
       return "SQLite";
     case "styled-components":
@@ -62,6 +64,8 @@ export function getTechnologyName(technology: string): string {
       return "TypeScript";
     case 'unity':
       return "Unity";
+    case "uob":
+      return "University of Bristol";
     default:
       return technology.charAt(0).toUpperCase();
   }

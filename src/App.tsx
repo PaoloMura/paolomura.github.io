@@ -7,6 +7,7 @@ import classes from "./App.module.css";
 import Header from "./sections/header/Header";
 import Projects from "./sections/projects/Projects";
 import Skills from "./sections/skills/Skills";
+import Experiences from "./sections/experiences/Experiences";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Header />
         <Hero />
         <Projects />
+        <Experiences />
         <Skills />
       </Box>
       <Box className={classes.footer}>

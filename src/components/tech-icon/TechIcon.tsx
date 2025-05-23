@@ -33,12 +33,6 @@ export default function TechIcon({
 }: TechIconProps) {
   const name = getTechnologyName(technology);
 
-  return (
-    <Tooltip label={name}>
-      <IconSVG size={size} technology={technology} name={name} />
-    </Tooltip>
-  );
-
   if (tooltip) {
     console.log("tooltip for ", technology);
     return (

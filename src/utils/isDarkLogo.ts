@@ -10,6 +10,7 @@ export function isDarkLogo(logo: string): boolean {
     "styled-components",
     "sqlite",
     "unity",
+    "uob",
   ];
 
   return darkLogos.includes(logo);
