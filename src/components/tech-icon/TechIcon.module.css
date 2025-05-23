@@ -1,7 +1,8 @@
-.container {
-  border-radius: var(--mantine-radius-lg);
-  
+.icon {
   &[data-variant="dark"] {
-    filter: drop-shadow(0 0 .05rem var(--mantine-color-white));
+    @mixin dark {
+      filter: invert(94%) sepia(0%) saturate(3766%) hue-rotate(196deg)
+        brightness(115%) contrast(109%);
+    }
   }
 }

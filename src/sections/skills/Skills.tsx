@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   Grid,
-  Image,
   Paper,
   Stack,
   Text,
@@ -11,6 +10,7 @@ import {
 import skills from "@/data/skills.json";
 import classes from "./Skills.module.css";
 import { getTechnologyName } from "@/utils/getTechnologyName";
+import TechIcon from "@/components/tech-icon/TechIcon";
 
 export default function Skills() {
   return (
@@ -34,13 +34,7 @@ export default function Skills() {
                   h="100%"
                 >
                   <Paper className={classes.skillContainer}>
-                    <Image
-                      src={`/icons/${technology}-logo.svg`}
-                      alt=""
-                      fit="contain"
-                      h={50}
-                      w={50}
-                    />
+                    <TechIcon technology={technology} size={50} />
 
                     <Text>{getTechnologyName(technology)}</Text>
                   </Paper>

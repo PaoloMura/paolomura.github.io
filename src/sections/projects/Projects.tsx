@@ -47,7 +47,9 @@ export default function Projects() {
 
                       <Group gap="xs">
                         {project.keywords.map((keyword) => (
-                          <Badge variant="default">{keyword}</Badge>
+                          <Badge key={`keyword-${keyword}`} variant="default">
+                            {keyword}
+                          </Badge>
                         ))}
                       </Group>
 
@@ -56,6 +58,7 @@ export default function Projects() {
                           <TechIcon
                             key={`icon-${technology}`}
                             technology={technology}
+                            tooltip
                           />
                         ))}
                       </Group>
