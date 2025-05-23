@@ -15,7 +15,7 @@ import { getTechnologyName } from "@/utils/getTechnologyName";
 export default function Skills() {
   return (
     <Container size="lg">
-      <Title order={2} pb="xl" pt="xl" ta={{ base: "center", sm: "left" }}>
+      <Title order={2} pt="xl" ta={{ base: "center", sm: "left" }}>
         Skills
       </Title>
 
