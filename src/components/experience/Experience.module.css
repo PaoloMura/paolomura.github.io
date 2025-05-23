@@ -1,6 +1,8 @@
 .header {
   display: flex;
   align-items: flex-end;
+  height: fit-content;
+  position: relative;
 }
 
 .body {
@@ -36,4 +38,41 @@
   margin-left: 150px;
   padding-top: var(--mantine-spacing-xs);
   padding-bottom: 70px;
+}
+
+.container {
+  margin: var(--mantine-spacing-sm);
+  width: 100%;
+}
+
+.mobileHeader {
+  display: flex;
+  align-items: stretch;
+  height: fit-content;
+  position: relative;
+  gap: var(--mantine-spacing-sm);
+}
+
+.mobileTitle {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mobileDescription {
+  padding-top: var(--mantine-spacing-sm);
+
+  &::after {
+    content: "";
+    display: block;
+    height: 70px;
+    border-left: 0.2rem solid
+      light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-3));
+    left: 50%;
+    position: relative;
+    width: 5px;
+    margin-top: var(--mantine-spacing-sm);
+  }
 }
