@@ -5,6 +5,10 @@
   );
 }
 
+.background[data-variant="light"] {
+  background-color: var(--mantine-color-body);
+}
+
 .title {
   text-transform: capitalize;
 

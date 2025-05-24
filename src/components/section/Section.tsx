@@ -4,7 +4,7 @@ import { useNavigationRefs } from "@/providers/Navigation";
 
 type SectionProps = {
   name: SectionName;
-  variant?: "default" | "dark";
+  variant?: "light" | "dark";
   size?: "xs" | "sm" | "md" | "lg";
   children?: React.ReactNode;
 };

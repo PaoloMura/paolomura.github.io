@@ -55,7 +55,7 @@ const DesktopExperience = ({
 
 export default function Experience() {
   return (
-    <Section name="experience" size="xs">
+    <Section name="experience" size="xs" variant="light">
       {experiences.map((experience, index) => (
         <Box key={`experience-${index}`}>
           <Box hiddenFrom="xs">

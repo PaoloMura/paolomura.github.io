@@ -1,5 +1,8 @@
 .content {
-  background-color: var(--mantine-color-body);
+  background-color: light-dark(
+    var(--mantine-color-gray-3),
+    var(--mantine-color-dark-5)
+  );
   border-radius: 0 0 65px 65px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 160px;
@@ -9,10 +12,7 @@
 }
 
 .footer {
-  background-color: light-dark(
-    var(--mantine-color-gray-3),
-    var(--mantine-color-dark-4)
-  );
+  background-color: var(--mantine-color-body);
   bottom: 0;
   left: 0;
   position: fixed;
