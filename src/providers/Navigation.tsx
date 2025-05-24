@@ -58,7 +58,6 @@ export function NavigationProvider({ children }: NavigationProviderProps) {
     ) || "hero";
 
   const navigateToSection = (section: SectionName) => {
-    console.log(`Navigating to section: ${section}`);
     switch (section) {
       case "hero":
         scrollToHero({ alignment: "start" });

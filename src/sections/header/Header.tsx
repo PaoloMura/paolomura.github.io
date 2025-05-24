@@ -63,7 +63,7 @@ export default function Header() {
             <Container size="lg" py="md">
               <Flex justify="space-between" align="center" gap="lg">
                 <Box flex={1}>
-                  <LogoLink />
+                  <LogoLink onClick={toggle} />
                 </Box>
 
                 <ColourSchemeSwitch />

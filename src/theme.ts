@@ -10,6 +10,6 @@ export const theme = createTheme({
     },
   },
   other: {
-    headerHeight: 92,
+    headerHeight: 74,
   }
 });

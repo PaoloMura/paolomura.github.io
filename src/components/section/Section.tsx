@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Title } from "@mantine/core";
+import { Box, Container, Title } from "@mantine/core";
 import classes from "./Section.module.css";
 import { useNavigationRefs } from "@/providers/Navigation";
 
@@ -20,16 +20,9 @@ export default function Section({
   return (
     <Box className={classes.background} variant={variant} ref={ref} id={name}>
       <Container size={size}>
-        <Flex
-          align="flex-end"
-          justify={{ base: "center", sm: "left" }}
-          h="92px"
-          ref={targetRef}
-        >
-          <Title order={2} className={classes.title}>
-            {name}
-          </Title>
-        </Flex>
+        <Title order={2} className={classes.title} ref={targetRef}>
+          {name}
+        </Title>
 
         {children}
       </Container>

@@ -2,6 +2,10 @@ import { useNavigation } from "@/providers/Navigation";
 import { Button, NavLink } from "@mantine/core";
 import classes from "./NavigationLink.module.css";
 
+type LogoLinkProps = {
+  onClick?: () => void;
+};
+
 type LinkProps = {
   section: SectionName;
 };
@@ -10,11 +14,14 @@ type DrawerLinkProps = LinkProps & {
   onClick: () => void;
 };
 
-export const LogoLink = () => {
+export const LogoLink = ({ onClick }: LogoLinkProps) => {
   const { navigateToSection } = useNavigation();
   return (
     <Button
-      onClick={() => navigateToSection("hero")}
+      onClick={() => {
+        navigateToSection("hero");
+        onClick && onClick();
+      }}
       className={classes.logo}
       variant="transparent"
     >

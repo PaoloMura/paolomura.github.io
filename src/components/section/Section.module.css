@@ -1,3 +1,7 @@
+.background {
+  padding-top: var(--mantine-spacing-lg);
+}
+
 .background[data-variant="dark"] {
   background-color: light-dark(
     var(--mantine-color-gray-3),
@@ -11,6 +15,9 @@
 
 .title {
   text-transform: capitalize;
+  text-align: center;
+  padding-top: calc(74px + var(--mantine-spacing-lg));
+  padding-bottom: var(--mantine-spacing-lg);
 
   @mixin larger-than $mantine-breakpoint-sm {
     text-align: left;

@@ -10,11 +10,14 @@ import {
 import profileHero from "/profile-hero.webp";
 import profileHeroMobile from "/profile-hero-mobile.webp";
 import classes from "./Hero.module.css";
+import { useNavigationRefs } from "@/providers/Navigation";
 
 export default function Hero() {
+  const { ref, targetRef } = useNavigationRefs("hero");
+
   return (
-    <Box className={classes.background}>
-      <Container className={classes.container}>
+    <Box className={classes.background} ref={ref} id="hero">
+      <Container className={classes.container} ref={targetRef}>
         <Flex
           align="center"
           direction={{ base: "column", sm: "row" }}

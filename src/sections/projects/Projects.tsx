@@ -19,7 +19,7 @@ import Section from "@/components/section/Section";
 export default function Projects() {
   return (
     <Section name="projects" variant="dark">
-      <Grid gutter={{ base: "lg", sm: "md" }} pt="lg">
+      <Grid gutter={{ base: "lg", sm: "md" }} pb="lg">
         {projects.map((project) => (
           <Grid.Col
             key={`project-${project.name}`}
