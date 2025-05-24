@@ -1,5 +1,7 @@
+import experiences from "@/data/experience.json";
+import Section from "@/components/section/Section";
 import { Box, Text, Title } from "@mantine/core";
-import TechIcon from "../tech-icon/TechIcon";
+import TechIcon from "@/components/tech-icon/TechIcon";
 import classes from "./Experience.module.css";
 
 type ExperienceProps = {
@@ -51,16 +53,20 @@ const DesktopExperience = ({
   </>
 );
 
-export default function Experience(props: ExperienceProps) {
+export default function Experience() {
   return (
-    <>
-      <Box hiddenFrom="xs">
-        <MobileExperience {...props} />
-      </Box>
+    <Section name="experience" size="xs">
+      {experiences.map((experience, index) => (
+        <Box key={`experience-${index}`}>
+          <Box hiddenFrom="xs">
+            <MobileExperience {...experience} />
+          </Box>
 
-      <Box visibleFrom="xs">
-        <DesktopExperience {...props} />
-      </Box>
-    </>
+          <Box visibleFrom="xs">
+            <DesktopExperience {...experience} />
+          </Box>
+        </Box>
+      ))}
+    </Section>
   );
 }

@@ -29,9 +29,9 @@ export function NavigationProvider({ children }: NavigationProviderProps) {
   const { scrollIntoView: scrollToProjects, targetRef: projectsTarget } =
     useScrollIntoView<HTMLDivElement>();
 
-  const { ref: experiencesRef, inViewport: experiencesInView } =
+  const { ref: experienceRef, inViewport: experienceInView } =
     useInViewport();
-  const { scrollIntoView: scrollToExperiences, targetRef: experiencesTarget } =
+  const { scrollIntoView: scrollToExperience, targetRef: experienceTarget } =
     useScrollIntoView<HTMLDivElement>();
 
   const { ref: skillsRef, inViewport: skillsInView } = useInViewport();
@@ -41,14 +41,14 @@ export function NavigationProvider({ children }: NavigationProviderProps) {
   const refs = {
     hero: { ref: heroRef, targetRef: heroTarget },
     projects: { ref: projectsRef, targetRef: projectsTarget },
-    experiences: { ref: experiencesRef, targetRef: experiencesTarget },
+    experience: { ref: experienceRef, targetRef: experienceTarget },
     skills: { ref: skillsRef, targetRef: skillsTarget },
   };
 
   const sectionsInViewport: { [key in SectionName]: boolean } = {
     hero: heroInView,
     projects: projectsInView,
-    experiences: experiencesInView,
+    experience: experienceInView,
     skills: skillsInView,
   };
 
@@ -66,8 +66,8 @@ export function NavigationProvider({ children }: NavigationProviderProps) {
       case "projects":
         scrollToProjects({ alignment: "start" });
         break;
-      case "experiences":
-        scrollToExperiences({ alignment: "start" });
+      case "experience":
+        scrollToExperience({ alignment: "start" });
         break;
       case "skills":
         scrollToSkills({ alignment: "start" });

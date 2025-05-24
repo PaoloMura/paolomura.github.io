@@ -37,7 +37,7 @@ export default function Header() {
 
           <Flex gap="lg" visibleFrom="sm">
             <Link section="projects" />
-            <Link section="experiences" />
+            <Link section="experience" />
             <Link section="skills" />
           </Flex>
 
@@ -74,7 +74,7 @@ export default function Header() {
           </Box>
 
           <DrawerLink section="projects" onClick={toggle} />
-          <DrawerLink section="experiences" onClick={toggle} />
+          <DrawerLink section="experience" onClick={toggle} />
           <DrawerLink section="skills" onClick={toggle} />
         </Flex>
       </Drawer>

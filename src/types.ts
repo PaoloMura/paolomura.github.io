@@ -1,1 +1,1 @@
-type SectionName = 'hero' | 'projects' | 'experiences' | 'skills';
+type SectionName = 'hero' | 'projects' | 'experience' | 'skills';

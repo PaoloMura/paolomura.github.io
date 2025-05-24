@@ -7,7 +7,7 @@ import classes from "./App.module.css";
 import Header from "./sections/header/Header";
 import Projects from "./sections/projects/Projects";
 import Skills from "./sections/skills/Skills";
-import Experiences from "./sections/experiences/Experiences";
+import Experience from "./sections/experience/Experience";
 import { NavigationProvider } from "./providers/Navigation";
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
           <Header />
           <Hero />
           <Projects />
-          <Experiences />
+          <Experience />
           <Skills />
         </Box>
 
