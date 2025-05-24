@@ -1,0 +1,7 @@
+.switch {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--mantine-color-blue-5);
+  }
+}

@@ -1,107 +1,16 @@
-import {
-  Box,
-  Burger,
-  Button,
-  Container,
-  Drawer,
-  Flex,
-  NavLink,
-  Switch,
-  useComputedColorScheme,
-  useMantineColorScheme,
-} from "@mantine/core";
+import { Box, Burger, Container, Drawer, Flex } from "@mantine/core";
 import classes from "./Header.module.css";
-import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
-import { useNavigation } from "@/providers/Navigation";
-
-type LinkProps = {
-  section: SectionName;
-};
-
-type DrawerLinkProps = LinkProps & {
-  onClick: () => void;
-};
+import ColourSchemeSwitch from "@/components/colour-scheme-switch/ColourSchemeSwitch";
+import {
+  DrawerLink,
+  Link,
+  LogoLink,
+} from "@/components/navigation-link/NavigationLink";
 
 type BurgerBtnProps = {
   opened: boolean;
   toggle: () => void;
-};
-
-const Logo = () => {
-  const { navigateToSection } = useNavigation();
-  return (
-    <Button
-      onClick={() => navigateToSection("hero")}
-      className={classes.logo}
-      variant="transparent"
-    >
-      Paolo Mura
-    </Button>
-  );
-};
-
-const Link = ({ section }: LinkProps) => {
-  const { activeSection, navigateToSection } = useNavigation();
-
-  return (
-    <Button
-      component="button"
-      onClick={() => navigateToSection(section)}
-      size="md"
-      variant={activeSection === section ? "selected" : "transparent"}
-      className={classes.link}
-    >
-      {section}
-    </Button>
-  );
-};
-
-const DrawerLink = ({ section, onClick }: DrawerLinkProps) => {
-  const { activeSection, navigateToSection } = useNavigation();
-
-  return (
-    <NavLink
-      label={section}
-      onClick={() => {
-        navigateToSection(section);
-        onClick();
-      }}
-      active={activeSection === section}
-      flex={1}
-      className={classes.drawerLink}
-    />
-  );
-};
-
-const ColourSchemeSwitch = () => {
-  const { setColorScheme } = useMantineColorScheme();
-
-  const computedColorScheme = useComputedColorScheme("light");
-
-  const toggleColorScheme = () => {
-    setColorScheme(computedColorScheme === "dark" ? "light" : "dark");
-  };
-
-  return (
-    <Switch
-      aria-label="Toggle color scheme"
-      size="xl"
-      checked={computedColorScheme === "dark"}
-      onChange={toggleColorScheme}
-      onLabel={<IconSun size={16} stroke={2.5} />}
-      offLabel={<IconMoon size={16} stroke={2.5} />}
-      thumbIcon={
-        computedColorScheme === "dark" ? (
-          <IconMoon size={16} stroke={2.5} color="black" />
-        ) : (
-          <IconSun size={16} stroke={2.5} color="black" />
-        )
-      }
-      color="gray"
-      classNames={{ track: classes.switch }}
-    />
-  );
 };
 
 const BurgerBtn = ({ opened, toggle }: BurgerBtnProps) => (
@@ -122,7 +31,7 @@ export default function Header() {
     <header className={classes.container}>
       <Container size="lg" py="md">
         <Flex justify="space-between" align="center" gap="lg">
-          <Logo />
+          <LogoLink />
 
           <Box flex={1} />
 
@@ -154,7 +63,7 @@ export default function Header() {
             <Container size="lg" py="md">
               <Flex justify="space-between" align="center" gap="lg">
                 <Box flex={1}>
-                  <Logo />
+                  <LogoLink />
                 </Box>
 
                 <ColourSchemeSwitch />

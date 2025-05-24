@@ -1,0 +1,38 @@
+.logo {
+  color: var(--mantine-color-white);
+  font-weight: 700;
+  font-size: var(--mantine-font-size-xl);
+
+  @mixin smaller-than $mantine-breakpoint-sm {
+    font-size: var(--mantine-font-size-lg);
+  }
+}
+
+.link {
+  color: var(--mantine-color-white);
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-sm);
+
+  &[data-variant="selected"] {
+    border-bottom: 0.2rem solid var(--mantine-color-white);
+    background-color: transparent;
+  }
+
+  &:hover {
+    color: var(--mantine-color-blue-5);
+  }
+}
+
+.drawerLink {
+  text-align: center;
+  text-transform: capitalize;
+  border-bottom: 0.1rem solid light-dark(
+    var(--mantine-color-gray-3),
+    var(--mantine-color-dark-5)
+  );
+}
