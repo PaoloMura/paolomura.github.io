@@ -15,7 +15,7 @@
 
 .drawerHeader {
   background-color: var(--mantine-color-dark-8);
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,12 +24,18 @@
 .logo {
   color: var(--mantine-color-white);
   font-weight: 700;
+  font-size: var(--mantine-font-size-xl);
+
+  @mixin smaller-than $mantine-breakpoint-sm {
+    font-size: var(--mantine-font-size-lg);
+  }
 }
 
 .link {
   color: var(--mantine-color-white);
   font-weight: 500;
   text-decoration: none;
+  text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
   position: relative;
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
@@ -43,4 +49,30 @@
   &:hover {
     color: var(--mantine-color-blue-5);
   }
+}
+
+.switch {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--mantine-color-blue-5);
+  }
+}
+
+.burger:hover *,
+.burger:hover *::before,
+.burger:hover *::after {
+  background-color: var(--mantine-color-blue-5);
+}
+
+.burger *[data-opened] {
+  background-color: transparent;
+}
+
+.drawerLink {
+  text-align: center;
+  border-bottom: 0.1rem solid light-dark(
+    var(--mantine-color-gray-3),
+    var(--mantine-color-dark-5)
+  );
 }
