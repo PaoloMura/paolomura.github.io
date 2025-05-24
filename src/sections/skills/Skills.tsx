@@ -1,16 +1,31 @@
-import { Box, Container, Grid, Paper, Stack, Text, Title } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  Paper,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 import skills from "@/data/skills.json";
 import classes from "./Skills.module.css";
 import { getTechnologyName } from "@/utils/getTechnologyName";
 import TechIcon from "@/components/tech-icon/TechIcon";
 
-export default function Skills() {
+type SkillsProps = {
+  targetRef: React.RefObject<HTMLDivElement>;
+};
+
+export default function Skills({ targetRef }: SkillsProps) {
   return (
     <Box className={classes.background}>
       <Container size="lg" pt="md" pb="md">
-        <Title order={2} pt="xl" ta={{ base: "center", sm: "left" }}>
-          Skills
-        </Title>
+        <Flex align="flex-end" h="92px" ref={targetRef}>
+          <Title order={2} ta={{ base: "center", sm: "left" }}>
+            Skills
+          </Title>
+        </Flex>
 
         <Stack gap="lg">
           {skills.map((skill) => (

@@ -1,10 +1,46 @@
 .container {
-  background-color: light-dark(
-    var(--mantine-color-gray-1),
-    var(--mantine-color-dark-9)
-  );
+  background-color: var(--mantine-color-dark-8);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: var(--mantine-z-index-modal);
+
+  @mixin dark {
+    background-color: alpha(var(--mantine-color-black), 0.7);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--mantine-shadow-lg);
+  }
+}
+
+.drawerHeader {
+  background-color: var(--mantine-color-dark-8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  color: var(--mantine-color-white);
+  font-weight: 700;
+}
+
+.link {
+  color: var(--mantine-color-white);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-sm);
+
+  &[data-variant="selected"] {
+    border-bottom: 0.2rem solid var(--mantine-color-white);
+    background-color: transparent;
+  }
+
+  &:hover {
+    color: var(--mantine-color-blue-5);
+  }
 }

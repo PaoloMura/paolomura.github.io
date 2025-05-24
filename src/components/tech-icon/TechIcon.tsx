@@ -34,7 +34,6 @@ export default function TechIcon({
   const name = getTechnologyName(technology);
 
   if (tooltip) {
-    console.log("tooltip for ", technology);
     return (
       <Tooltip label={name}>
         <IconSVG size={size} technology={technology} name={name} />

@@ -18,14 +18,25 @@ import { IconExternalLink } from "@tabler/icons-react";
 import GridCard from "@/components/grid-card/GridCard";
 import TechIcon from "@/components/tech-icon/TechIcon";
 
-export default function Projects() {
+type ProjectProps = {
+  targetRef: React.RefObject<HTMLDivElement>;
+};
+
+export default function Projects({ targetRef }: ProjectProps) {
   return (
     <Box className={classes.background}>
       <Container size="lg">
-        <Title order={2} pb="xl" pt="xl" ta={{ base: "center", sm: "left" }}>
-          Projects
-        </Title>
-        <Grid gutter={{ base: "lg", sm: "md" }}>
+        <Flex
+          align="flex-end"
+          h="92px"
+          ref={targetRef}
+        >
+          <Title order={2} ta={{ base: "center", sm: "left" }}>
+            Projects
+          </Title>
+        </Flex>
+
+        <Grid gutter={{ base: "lg", sm: "md" }} pt="lg">
           {projects.map((project) => (
             <Grid.Col
               key={`project-${project.name}`}
