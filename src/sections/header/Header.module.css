@@ -35,7 +35,7 @@
   color: var(--mantine-color-white);
   font-weight: 500;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: background-color 0.2s ease-in-out;
   position: relative;
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
@@ -71,6 +71,7 @@
 
 .drawerLink {
   text-align: center;
+  text-transform: capitalize;
   border-bottom: 0.1rem solid light-dark(
     var(--mantine-color-gray-3),
     var(--mantine-color-dark-5)
