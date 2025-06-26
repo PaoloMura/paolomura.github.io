@@ -1,7 +1,7 @@
 import experiences from "@/data/experience.json";
 import Section from "@/components/section/Section";
+import { OrganisationIcon, TechIcon } from "@/components/tech-icon/TechIcon";
 import { Box, Text, Title } from "@mantine/core";
-import TechIcon from "@/components/tech-icon/TechIcon";
 import classes from "./Experience.module.css";
 
 type ExperienceProps = {
@@ -19,11 +19,11 @@ const MobileExperience = ({
 }: ExperienceProps) => (
   <Box className={classes.container}>
     <Box className={classes.mobileHeader}>
-      <TechIcon technology={organisation} size={70} />
+      <TechIcon technology={organisation} size={50} />
 
       <Box className={classes.mobileTitle}>
-        <Title order={3}>{title}</Title>
-        <Text className={classes.years}>{years}</Text>
+        <Title order={3} fz="var(--mantine-font-size-md)">{title}</Title>
+        <Text className={classes.years} fz="var(--mantine-font-size-md)">{years}</Text>
       </Box>
     </Box>
 
@@ -42,8 +42,13 @@ const DesktopExperience = ({
       <Text className={classes.years}>{years}</Text>
 
       <Box className={classes.title}>
-        <TechIcon technology={organisation} size={50} />
-        <Title order={3}>{title}</Title>
+        <OrganisationIcon
+          organisation={organisation}
+          height="var(--mantine-h3-font-size)"
+        />
+        <Title order={3} lh={0}>
+          {title}
+        </Title>
       </Box>
     </Box>
 

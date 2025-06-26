@@ -13,7 +13,7 @@ import {
 import projects from "@/data/projects.json";
 import { IconExternalLink } from "@tabler/icons-react";
 import GridCard from "@/components/grid-card/GridCard";
-import TechIcon from "@/components/tech-icon/TechIcon";
+import { TechIcon } from "@/components/tech-icon/TechIcon";
 import Section from "@/components/section/Section";
 
 export default function Projects() {

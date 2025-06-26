@@ -2,7 +2,7 @@ import { Box, Grid, Paper, Stack, Text, Title } from "@mantine/core";
 import skills from "@/data/skills.json";
 import classes from "./Skills.module.css";
 import { getTechnologyName } from "@/utils/getTechnologyName";
-import TechIcon from "@/components/tech-icon/TechIcon";
+import { TechIcon } from "@/components/tech-icon/TechIcon";
 import Section from "@/components/section/Section";
 
 export default function Skills() {

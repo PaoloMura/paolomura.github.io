@@ -3,30 +3,36 @@ import { Image, Tooltip } from "@mantine/core";
 import classes from "./TechIcon.module.css";
 
 type TechIconProps = {
-  size?: number;
+  size?: number | string;
   technology: string;
   tooltip?: boolean;
 };
 
 type IconSVGProps = {
-  size: number;
+  width: number | string;
+  height: number | string;
   technology: string;
   name: string;
 };
 
-const IconSVG = ({ size, technology, name }: IconSVGProps) => (
+type OrganisationIconProps = {
+  organisation: string;
+  height: string | number;
+};
+
+const IconSVG = ({ width, height, technology, name }: IconSVGProps) => (
   <Image
     src={`/icons/${technology}-logo.svg`}
     alt={name}
     fit="contain"
     variant={isDarkLogo(technology) ? "dark" : "light"}
     className={classes.icon}
-    h={size}
-    w={size}
+    h={height}
+    w={width}
   />
 );
 
-export default function TechIcon({
+export function TechIcon({
   size = 24,
   technology,
   tooltip,
@@ -36,10 +42,24 @@ export default function TechIcon({
   if (tooltip) {
     return (
       <Tooltip label={name}>
-        <IconSVG size={size} technology={technology} name={name} />
+        <IconSVG width={size} height={size} technology={technology} name={name} />
       </Tooltip>
     );
   }
 
-  return <IconSVG size={size} technology={technology} name={name} />;
+  return <IconSVG width={size} height={size} technology={technology} name={name} />;
+}
+
+export function OrganisationIcon({
+  organisation,
+  height
+}: OrganisationIconProps) {
+  return (
+    <IconSVG
+      width="auto"
+      height={height}
+      technology={organisation}
+      name={getTechnologyName(organisation)}
+    />
+  );
 }

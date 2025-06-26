@@ -30,8 +30,10 @@
 
 .title {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--mantine-spacing-sm);
+  box-sizing: border-box;
+  height: calc(var(--mantine-h3-font-size) * var(--mantine-h3-line-height));
 }
 
 .description {
@@ -42,7 +44,6 @@
 
 .container {
   margin: var(--mantine-spacing-sm);
-  width: 100%;
 }
 
 .mobileHeader {
