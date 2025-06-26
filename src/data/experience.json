@@ -1,9 +1,15 @@
 [
   {
-    "years": "2023 - Present",
+    "years": "2025 - Present",
+    "organisation": "sky",
+    "title": "Software Engineer",
+    "description": "Building and maintaining the product discovery pages on the sky.com website. Includes testing and observability."
+  },
+  {
+    "years": "2023 - 2025",
     "organisation": "sky",
     "title": "Associate Software Engineer",
-    "description": "Building and maintaining the product discovery pages on the sky.com website. Includes testing and observability."
+    "description": "Spent my grad scheme in the Sky Go team, maintaining internal dashboards. Modernised the legacy Watch estate."
   },
   {
     "years": "2019 - 2023",
