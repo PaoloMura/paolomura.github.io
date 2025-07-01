@@ -20,7 +20,6 @@ export default function Skills() {
                 <Grid.Col
                   key={`skill-${technology}`}
                   span={{ base: 6, xs: 4, sm: 3, md: 2 }}
-                  h="100%"
                 >
                   <Paper className={classes.skillContainer}>
                     <TechIcon technology={technology} size={50} />
