@@ -4,12 +4,12 @@
     "description": "A website that allows users to find dance classes and socials in their local area.",
     "image": "/projects/dance-events.webp",
     "keywords": ["website", "dance"],
-    "technologies": ["react", "mui"],
+    "technologies": ["nextjs", "mantine", "postgresql"],
     "year": "2025",
     "ctas": [
       {
         "text": "Website",
-        "url": "https://paolomura.github.io/dance-events"
+        "url": "https://www.latindance.info"
       }
     ]
   },
