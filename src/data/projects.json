@@ -15,7 +15,7 @@
   },
   {
     "name": "Nexus",
-    "description": "A event organising social networking website that connects users through mutual friends.",
+    "description": "An event organising social networking website that connects users through mutual friends.",
     "image": "/projects/nexus.webp",
     "keywords": ["website", "social networking"],
     "technologies": ["nextjs", "mui", "postgresql"],
